@@ -6,7 +6,7 @@
   grid-template-areas: 
   '. header header header .'
   '. . random-restaurant . .'
-  '. . random-comment . .'
+  '. . random-violation . .'
   '. . front-page-buttons . .'
 }
 
@@ -22,8 +22,8 @@
   align-self: end;
 }
 
-.random-comment {
-  grid-area: random-comment
+.random-violation {
+  grid-area: random-violation
 }
 
 .front-page-buttons {
