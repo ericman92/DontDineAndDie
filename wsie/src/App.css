@@ -4,7 +4,7 @@
   grid-template-columns: auto 100px 400px 100px auto;
   grid-auto-rows: 2fr 1fr 1fr;
   grid-template-areas: 
-  '. . header . .'
+  '. header header header .'
   '. . random-restaurant . .'
   '. . random-comment . .'
   '. . front-page-buttons . .'
@@ -13,11 +13,13 @@
 .header {
   grid-area: header;
   align-self: end;
-  margin: 0;
+  margin: 125px 0px 0px;
+  font-size: 3em
 }
 
 .random-restaurant {
-  grid-area: random-restaurant
+  grid-area: random-restaurant;
+  align-self: end;
 }
 
 .random-comment {

@@ -6,8 +6,8 @@ class App extends Component {
     return (
       <div className="wsie-container">
         <h1 className='header'>Where Shouldn't I Eat?</h1>
-        <div className='random-restaurant'>randomRestaurant</div>
-        <div className='random-comment'></div>
+        <div className='random-restaurant'>Random Restaurant</div>
+        <div className='random-comment'>Random Comment</div>
         <div className='front-page-buttons'>
           <button className='button-another'>Give Me Another</button>
           <button className='button-near'>Near Me</button>
