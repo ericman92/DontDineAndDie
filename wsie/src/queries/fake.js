@@ -1,64 +1,104 @@
 // array of top ten worst restaurants 
 export const topTenWorst = [
     {
+        "boro": "QUEENS",
         "camis": "50033122",
         "count": "14",
+        "cuisine_description": "Korean",
         "dba": "PARTY WELL RESTAURANT & ORIENTAL BAKERY",
-        "violation_description": "Facility not vermin proof. Harborage or conditions conducive to attracting vermin to the premises and/or allowing vermin to exist."
+        "street": "41ST AVE",
+        "violation_description": "Facility not vermin proof. Harborage or conditions conducive to attracting vermin to the premises and/or allowing vermin to exist.",
+        "zipcode": "11355"
     },
     {
+        "boro": "MANHATTAN",
         "camis": "41430594",
         "count": "14",
+        "cuisine_description": "Bakery",
         "dba": "1 STOP PATTY SHOP",
-        "violation_description": "Evidence of mice or live mice present in facility's food and/or non-food areas."
+        "street": "AMSTERDAM AVENUE",
+        "violation_description": "Evidence of mice or live mice present in facility's food and/or non-food areas.",
+        "zipcode": "10031"
     },
     {
-        "camis": "41444879",
-        "count": "13",
-        "dba": "GRAND BO KY RESTAURANT",
-        "violation_description": "Evidence of mice or live mice present in facility's food and/or non-food areas."
-    },
-    {
+        "boro": "MANHATTAN",
         "camis": "50017257",
         "count": "13",
+        "cuisine_description": "Pizza",
         "dba": "PICK & PAY GYRO & PIZZA",
-        "violation_description": "Evidence of mice or live mice present in facility's food and/or non-food areas."
+        "street": "LEXINGTON AVE",
+        "violation_description": "Evidence of mice or live mice present in facility's food and/or non-food areas.",
+        "zipcode": "10010"
     },
     {
+        "boro": "BROOKLYN",
         "camis": "40861669",
         "count": "13",
+        "cuisine_description": "Chinese",
         "dba": "NEW VICTORY RESTAURANT",
-        "violation_description": "Evidence of mice or live mice present in facility's food and/or non-food areas."
+        "street": "5 AVENUE",
+        "violation_description": "Evidence of mice or live mice present in facility's food and/or non-food areas.",
+        "zipcode": "11220"
     },
     {
+        "boro": "MANHATTAN",
+        "camis": "41444879",
+        "count": "13",
+        "cuisine_description": "Chinese",
+        "dba": "GRAND BO KY RESTAURANT",
+        "street": "GRAND STREET",
+        "violation_description": "Evidence of mice or live mice present in facility's food and/or non-food areas.",
+        "zipcode": "10013"
+    },
+    {
+        "boro": "BROOKLYN",
         "camis": "41149565",
         "count": "12",
+        "cuisine_description": "Caribbean",
         "dba": "CAS' WEST INDIAN & AMERICAN RESTAURANT",
-        "violation_description": "Evidence of mice or live mice present in facility's food and/or non-food areas."
+        "street": "KINGSTON AVENUE",
+        "violation_description": "Evidence of mice or live mice present in facility's food and/or non-food areas.",
+        "zipcode": "11213"
     },
     {
-        "camis": "40386147",
-        "count": "12",
-        "dba": "JACKS ALE HOUSE",
-        "violation_description": "Evidence of mice or live mice present in facility's food and/or non-food areas."
-    },
-    {
+        "boro": "BROOKLYN",
         "camis": "41353598",
         "count": "12",
+        "cuisine_description": "Caribbean",
         "dba": "NIO'S WEST INDIAN RESTAURANT & BAKERY",
-        "violation_description": "Live roaches present in facility's food and/or non-food areas."
+        "street": "CHURCH AVENUE",
+        "violation_description": "Live roaches present in facility's food and/or non-food areas.",
+        "zipcode": "11226"
     },
     {
+        "boro": "MANHATTAN",
         "camis": "41630632",
         "count": "12",
+        "cuisine_description": "Chinese",
         "dba": "J J NOODLE",
-        "violation_description": "Facility not vermin proof. Harborage or conditions conducive to attracting vermin to the premises and/or allowing vermin to exist."
+        "street": "HENRY STREET",
+        "violation_description": "Facility not vermin proof. Harborage or conditions conducive to attracting vermin to the premises and/or allowing vermin to exist.",
+        "zipcode": "10002"
     },
     {
+        "boro": "BROOKLYN",
         "camis": "50002348",
         "count": "12",
+        "cuisine_description": "Indian",
         "dba": "DESI GRILL INDIAN CUISINE",
-        "violation_description": "Live roaches present in facility's food and/or non-food areas."
+        "street": "WYCKOFF AVE",
+        "violation_description": "Live roaches present in facility's food and/or non-food areas.",
+        "zipcode": "11237"
+    },
+    {
+        "boro": "BROOKLYN",
+        "camis": "40861669",
+        "count": "12",
+        "cuisine_description": "Chinese",
+        "dba": "NEW VICTORY RESTAURANT",
+        "street": "5 AVENUE",
+        "violation_description": "Facility not vermin proof. Harborage or conditions conducive to attracting vermin to the premises and/or allowing vermin to exist.",
+        "zipcode": "11220"
     }
 ]
 // listing of top 20 for rendering the page search page
