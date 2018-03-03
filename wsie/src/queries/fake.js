@@ -1,4 +1,5 @@
-const topTenWorst = [
+// array of top ten worst restaurants 
+export const topTenWorst = [
     {
         "camis": "50033122",
         "count": "14",
@@ -60,8 +61,8 @@ const topTenWorst = [
         "violation_description": "Live roaches present in facility's food and/or non-food areas."
     }
 ]
-
-const topTwenty = [
+// listing of top 20 for rendering the page search page
+export const topTwenty = [
     {
         "action": "Violations were cited in the following area(s).",
         "boro": "MANHATTAN",
