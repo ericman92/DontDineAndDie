@@ -24,7 +24,7 @@ class App extends Component {
 
   render() {
     const {currentPage} = this.state
-    let rando = Math.floor(Math.random() * 5+1)
+    let rando = Math.floor(Math.random() * 5 + 1)
     let name = getSix.getAll()[rando].dba;
     let desc = getSix.getAll()[rando].violation_description;
     let complaintNumber = getSix.getAll()[rando].count
@@ -34,19 +34,22 @@ class App extends Component {
           ? <div className="wsie-container">
               {/* <input type='text' placeholder="Enter Restaurant Name" /> */}
               <h1 className='header'>Don't Dine and Die</h1>
-              <ListSingle
-                complaintNumber={complaintNumber}
-                restaurantName={name}
-                complaintDescription={desc}
-                />
-              <button name='search-page' className='front-page-button' onClick={this.togglePage} >See More Restaurants</button>
+              <div className='random-restaurant'>
+                <ListSingle
+                  complaintNumber={complaintNumber}
+                  restaurantName={name}
+                  complaintDescription={desc}/>
+              </div>
+              <button
+                name='search-page'
+                className='front-page-button'
+                onClick={this.togglePage}>See More Restaurants</button>
             </div>
           : <SearchPage togglePage={this.togglePage}/>
-      } 
-      </div>
+      } </div>
 
-  )
+    )
 
-}
+  }
 }
 export default App;
