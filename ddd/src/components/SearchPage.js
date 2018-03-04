@@ -84,6 +84,7 @@ class SearchPage extends Component {
                         name="zipcode"
                         value={zipcode}/>
                 </div>
+                    <div className='search-page-list' >
                     {data.length === 0
                         ? <p>Hello</p>
                         : data.map(obj => {
@@ -91,6 +92,7 @@ class SearchPage extends Component {
                             complaintNumber={obj.count}
                             restaurantName={obj.dba}
                     complaintDescription={obj.violation_description}/>})}
+                        </div>
             </div>
         )
     }
