@@ -6,8 +6,8 @@
   grid-template-areas: 
   '. header header header .'
   '. . random-restaurant . .'
-  '. . random-violation . .'
-  '. . front-page-buttons . .'
+  '. . random-restaurant . .'
+  '. . front-page-button . .';
 }
 
 .header {
@@ -19,13 +19,10 @@
 
 .random-restaurant {
   grid-area: random-restaurant;
-  align-self: end;
+  align-self: center;
 }
 
-.random-violation {
-  grid-area: random-violation
-}
-
-.front-page-buttons {
-  grid-area: front-page-buttons
+.front-page-button {
+  grid-area: front-page-button;
+  height: 20px;
 }

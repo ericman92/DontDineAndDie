@@ -11,7 +11,7 @@ export const getCuisine = (cuisine) => {
     .catch((err) => console.log(err))
 }
 
-export const getByZip = (zip) => {
+const getByZip = (zip) => {
     axios.get(cuisineURL+`&zipcode=${zip}&$limit=20&$order=count(*)DESC`)
     .then((response) => {
         console.log(response);
@@ -27,7 +27,5 @@ export const getByDBA = (name) => {
     .catch((err) => console.log(err))
 }
 
-export default getByZip
-
-//https://data.cityofnewyork.us/resource/9w7m-hzhe.json?$select=count(*),camis,dba,violation_description,street,cuisine_description,boro,zipcode&$group=camis,dba,violation_description,street,cuisine_description,boro,zipcode&$WHERE=${cuisine}&$limit=10&$order=count(*)DESC
+export default {getByZip}
 

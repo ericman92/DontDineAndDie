@@ -1,0 +1,53 @@
+.second-Page {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: auto 1000px auto;
+    grid-template-rows: 1fr 1fr 1fr 3fr;
+    grid-template-areas: 
+    '. second-header .'
+    '. search-name .'
+    '. sort-menu .'
+    '. list .'
+  }
+  
+  .sort-menu{
+    grid-area: sort-menu;
+    display: grid;  
+    justify-items: center;
+    grid-template-columns: 250px 250px 250px 250px ;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'complaint zip boro cuisine'
+  }
+  
+  .second-header {
+      grid-area: second-header;
+      font-family: 'Raleway', sans-serif;
+  }
+  .search-name {
+      grid-area: search-name;
+      font-family: 'Kanit', sans-serif;
+  }
+  .list {
+      grid-area: list;
+  
+  }
+  .complaint {
+      grid-area: complaint;
+      font-family: 'Kanit', sans-serif;
+  }
+  .zip {
+      grid-area: zip;
+      height:20px;
+      font-family: 'Kanit', sans-serif;
+  }
+  .boro {
+      grid-area: boro;
+      height:20px;
+      font-family: 'Kanit', sans-serif;
+  }
+  .cuisine {
+      grid-area: cuisine;
+      height:20px;
+      font-family: 'Kanit', sans-serif;
+  }

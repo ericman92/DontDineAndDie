@@ -1,0 +1,35 @@
+.random-restaurant {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'single-link-complaintNumber single-link-info';
+    border: white 2px solid;
+    box-shadow: white 1px 1px 5px;
+}
+
+.wrapper {
+    grid-area: single-link-complaintNumber;
+    font-size: 3em;
+    padding-top: 10px;
+}
+
+.single-link-complaint-number {
+    font-size: 1em;
+    padding: 10px;
+}
+.single-link-complaint-footer {
+    font-size: .1em;
+    text-align: center
+}
+
+.single-link-info-name {
+    grid-area: single-link-info;
+    align-self: start;
+    margin: 15px 0px 0 10px
+}
+
+.single-link-info-location {
+    grid-area: single-link-info;
+    align-self: end;
+    margin: 0 0 15px 10px 
+}
