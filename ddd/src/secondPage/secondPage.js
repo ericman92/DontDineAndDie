@@ -1,7 +1,22 @@
 import React, { Component } from 'react';
 import './secondPage.css';
+import queries from '../queries/queries';
 
 class App extends Component {
+    constructor() {
+        super();
+        this.state = {
+            zipCode: ''
+        }
+    }
+
+    inputHandler = (e) => {
+        console.log(e.target.value);
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
     render() {
         return (
             <div className='second-Page'>
@@ -18,6 +33,8 @@ class App extends Component {
                         <option className='dropdown-opts' value="staten">Staten Island</option>
                     </select>
                     <input className='cuisine' text='text' placeholder='Cuisine' />
+                    <input onChange={this.inputHandler} name="zip_code"type="text" placeholder='Zip code'/>
+                    <button onClick={queries.getByZip(this.state.zipCode)}>Submit</button>
                 </div>
             </div>
         )
