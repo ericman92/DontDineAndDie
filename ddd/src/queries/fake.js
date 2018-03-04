@@ -475,8 +475,7 @@ export const topTwenty = [
         "zipcode": "11358"
     }
 ]
-
-export const randomSix = [
+const randomSix = [
     {
         "boro": "MANHATTAN",
         "camis": "41430594",
@@ -538,3 +537,9 @@ export const randomSix = [
         "zipcode": "11237"
     }
 ]
+
+const getAll = () => randomSix;
+
+export default {
+    getAll,
+}
