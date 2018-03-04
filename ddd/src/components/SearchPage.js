@@ -33,7 +33,7 @@ class SearchPage extends Component {
                 })
             })
         }
-        
+
         if(e.target.name === 'cuisine') {
             queries.getCuisine(this.toTitleCase(e.target.value))
             .then(data => {
