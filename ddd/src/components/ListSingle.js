@@ -9,7 +9,7 @@ const ListSingle = ({complaintNumber, restaurantName, restaurantCuisine, restaur
                 <p className='single-link-complaint-footer'>Complaints</p>
             </div>
             <h3 className='single-link-info-name'>{restaurantName}{' '}
-                - {restaurantCuisine}</h3>
+             <br/><br/>{restaurantCuisine}</h3>
             <p className='single-link-info-location'>{restaurantBorough}{' '}{restaurantZipCode}
             </p>
         </div>

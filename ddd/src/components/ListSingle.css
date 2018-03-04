@@ -4,7 +4,10 @@
     grid-template-rows: 1fr;
     grid-template-areas: 'single-link-complaintNumber single-link-info';
     border: white 2px solid;
-    box-shadow: white 1px 1px 5px;
+    box-shadow: black 1px 1px 5px;
+    background-color: white;
+    color: rgb(177, 0, 0);
+    text-shadow: none;
 }
 
 .wrapper {
@@ -25,7 +28,8 @@
 .single-link-info-name {
     grid-area: single-link-info;
     align-self: start;
-    margin: 15px 0px 0 10px
+    margin: 15px 10px 0px 10px;
+    font-size: .8em
 }
 
 .single-link-info-location {

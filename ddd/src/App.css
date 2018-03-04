@@ -26,3 +26,8 @@
   grid-area: front-page-button;
   height: 20px;
 }
+
+input {
+  grid-area: random-restaurant;
+  height: 15px;
+}

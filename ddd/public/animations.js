@@ -320,7 +320,7 @@ var SpiderController = function () {
                     b.style.position = "fixed";
                     b.style.top = 0;
                     b.style.left = 0;
-                    b.style.zIndex = "9999999";
+                    b.style.zIndex = "-1";
                     this.bug = b;
                     this.setPos()
                 }

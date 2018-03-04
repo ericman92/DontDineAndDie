@@ -475,4 +475,71 @@ export const topTwenty = [
         "zipcode": "11358"
     }
 ]
+const randomSix = [
+    {
+        "boro": "MANHATTAN",
+        "camis": "41430594",
+        "count": "14",
+        "cuisine_description": "Bakery",
+        "dba": "1 STOP PATTY SHOP",
+        "street": "AMSTERDAM AVENUE",
+        "violation_description": "Evidence of mice or live mice present in facility's food and/or non-food areas.",
+        "zipcode": "10031"
+    },
+    {
+        "boro": "MANHATTAN",
+        "camis": "41444879",
+        "count": "13",
+        "cuisine_description": "Chinese",
+        "dba": "GRAND BO KY RESTAURANT",
+        "street": "GRAND STREET",
+        "violation_description": "Evidence of mice or live mice present in facility's food and/or non-food areas.",
+        "zipcode": "10013"
+    },
+    {
+        "boro": "BROOKLYN",
+        "camis": "41149565",
+        "count": "12",
+        "cuisine_description": "Caribbean",
+        "dba": "CAS' WEST INDIAN & AMERICAN RESTAURANT",
+        "street": "KINGSTON AVENUE",
+        "violation_description": "Evidence of mice or live mice present in facility's food and/or non-food areas.",
+        "zipcode": "11213"
+    },
+    {
+        "boro": "BROOKLYN",
+        "camis": "41353598",
+        "count": "12",
+        "cuisine_description": "Caribbean",
+        "dba": "NIO'S WEST INDIAN RESTAURANT & BAKERY",
+        "street": "CHURCH AVENUE",
+        "violation_description": "Live roaches present in facility's food and/or non-food areas.",
+        "zipcode": "11226"
+    },
+    {
+        "boro": "MANHATTAN",
+        "camis": "41630632",
+        "count": "12",
+        "cuisine_description": "Chinese",
+        "dba": "J J NOODLE",
+        "street": "HENRY STREET",
+        "violation_description": "Facility not vermin proof. Harborage or conditions conducive to attracting vermin to the premises and/or allowing vermin to exist.",
+        "zipcode": "10002"
+    },
+    {
+        "boro": "BROOKLYN",
+        "camis": "50002348",
+        "count": "12",
+        "cuisine_description": "Indian",
+        "dba": "DESI GRILL INDIAN CUISINE",
+        "street": "WYCKOFF AVE",
+        "violation_description": "Live roaches present in facility's food and/or non-food areas.",
+        "zipcode": "11237"
+    }
+]
 
+const getAll = () => randomSix;
+
+export default {
+    getAll,
+}
