@@ -45,6 +45,14 @@ const getByBoro = (boro) => {
     }
 }
 
+const getByAll = (cuisine, zip, boro, dba) => {
+    return axios
+    .get(`https://data.cityofnewyork.us/resource/9w7m-hzhe.json?$select=count(*),dba,grade,street,boro,violation_description&$group=dba,grade,street,boro,violation_description&cuisine_description=${cuisine}&zipcode=${zip}&boro=${boro}&dba=${dba}&$limit=20`)
+    .then((response) => {
+        console.log(response)
+    })
+}
+
 export default {
     getByZip,
     getByDBA,
@@ -56,3 +64,4 @@ export default {
 //ba,violation_description,street,cuisine_description,boro,zipcode&$group=camis,
 //dba,violation_description,street,cuisine_description,boro,zipcode&$WHERE=${cui
 //sine}&$limit=10&$order=count(*)DESC
+//https://data.cityofnewyork.us/resource/9w7m-hzhe.json?$select=count(*),dba,grade,street,boro,violation_description&$group=dba,grade,street,boro,violation_description&cuisine_description=${cuisine}&zipcode=${zip}&boro=${boro}&dba=${dba}&$limit=20

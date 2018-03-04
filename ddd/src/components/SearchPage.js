@@ -31,8 +31,7 @@ class SearchPage extends Component {
                 this.setState({
                     data: data
                 })
-        }
-        
+        })
         if(e.target.name === 'cuisine') {
             queries.getCuisine(this.toTitleCase(e.target.value))
             .then(data => {
