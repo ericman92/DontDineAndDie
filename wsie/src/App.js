@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <div className="wsie-container">
-        <h1 className='header'>Where Shouldn't I Eat?</h1>
+        <h1 className='header'>Don't Dine and Die</h1>
         <div className='random-restaurant'>Random Restaurant</div>
         <div className='random-comment'>Random Comment</div>
         <div className='front-page-buttons'>
