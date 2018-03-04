@@ -29,7 +29,7 @@ class SearchPage extends Component {
             .then(data => {
                 console.log(data);
                 this.setState({
-                    data: data
+                    data: data.data
                 })
         }
         
@@ -37,7 +37,7 @@ class SearchPage extends Component {
             queries.getCuisine(this.toTitleCase(e.target.value))
             .then(data => {
                 this.setState({
-                    data: data
+                    data: data.data
                 })
             })
         }
@@ -46,7 +46,7 @@ class SearchPage extends Component {
             queries.getByBoro(e.target.value.toUpperCase())
             .then(data => {
                 this.setState({
-                    data: data
+                    data: data.data
                 })
             })
         }
