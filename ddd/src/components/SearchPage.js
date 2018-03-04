@@ -6,7 +6,10 @@ class SearchPage extends Component {
     constructor() {
         super();
         this.state = {
-            zipCode: 11370,
+            zipcode: 0,
+            cuisine: '',
+            borough: '',
+            complaintNumber: false
         }
     }
 
@@ -14,30 +17,39 @@ class SearchPage extends Component {
         console.log(e.target.value);
         this.setState({
             [e.target.name]: e.target.value
-        })
+        }, this.log)
     }
+
+    complaintHandler = () => {
+        const {complaintNumber} = this.state
+        this.setState({
+            complaintNumber: !complaintNumber
+        }, this.log)
+    }
+
+    log = () => console.log(this.state)
 
     render() {
         const {togglePage} = this.props
+        const {complaintNumber} = this.state
         return (
-            <div className='second-Page'>
-                <h1 className='second-header'>Don't Dine and Die</h1>
-                <div className='search-name'> <input text='text' placeholder='Search keyword' className='search-' /> </div>
-                <div className="sort-menu">
-                    <p className='complaint'> Complaint # </p>
-                    <input className='zip' text='text' placeholder='Zip' />
-                    <select className='boro' placeholder='Borough'>
-                        <option className='dropdown-opts' value="bronx">Bronx</option>
-                        <option className='dropdown-opts' value="manhattan">Manhattan</option>
-                        <option className='dropdown-opts' value="queens">Queens</option>
-                        <option className='dropdown-opts' value="brooklyn">Brooklyn</option>
-                        <option className='dropdown-opts' value="staten">Staten Island</option>
+            <div className='search-page'>
+                <button name='front-page' onClick={togglePage} >Home</button>
+                <h1 className='search-page-header'>Don't Dine and Die</h1>
+                <div className='search-page-filters'>
+                    { complaintNumber 
+                        ? <p className='search-page-filters-complaint-number' onClick={this.complaintHandler} ># Of Complaints</p>
+                        : <p className='search-page-filters-complaint-number' onClick={this.complaintHandler} ># Of Complaints ↑</p>}                    
+                    <select className='search-page-filters-boro' placeholder='Borough' name='borough' onChange={this.inputHandler} >
+                        <option className='search-page-filters-boro-options' value="bronx">Bronx</option>
+                        <option className='search-page-filters-boro-options' value="manhattan">Manhattan</option>
+                        <option className='search-page-filters-boro-options' value="queens">Queens</option>
+                        <option className='search-page-filters-boro-options' value="brooklyn">Brooklyn</option>
+                        <option className='search-page-filters-boro-options' value="staten">Staten Island</option>
                     </select>
-                    <input className='cuisine' text='text' placeholder='Cuisine' />
-                    <input onChange={this.inputHandler} name="zip_code"type="text" placeholder='Zip code'/>
-                    <button onClick={queries.getByZip(this.state.zipCode)}>Submit</button>
+                    <input className='search-page-filters-cuisine' type='text' placeholder='Cuisine' onChange={this.inputHandler} name="cuisine" />
+                    <input className="search-page-filters-zip-code" type="text" placeholder='Zip code' onChange={this.inputHandler} name="zipcode"  />
                 </div>
-                <button name='front-page' onClick={togglePage}>Back</button>
             </div>
         )}
     }
