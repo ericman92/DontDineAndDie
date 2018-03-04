@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import getBy from './queries/queries'
 
 class App extends Component {
   render() {
@@ -10,7 +11,7 @@ class App extends Component {
         <div className='random-violation'>Rats! Rats! Rats! Rats!</div>
         <div className='front-page-buttons'>
           <button className='button-another'>Give Me Another</button>
-          <button className='button-near'>Near Me</button>
+          <button onClick={getBy.getByZip}>Near Me</button>
         </div>
       </div>
     );
