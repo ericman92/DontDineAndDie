@@ -37,9 +37,7 @@ class App extends Component {
               <ListSingle
                 complaintNumber={complaintNumber}
                 restaurantName={name}
-                restaurantCuisine={desc}
-                // restaurantBorough='Manhattan'
-                // restaurantZipCode='10031'
+                complaintDescription={desc}
                 />
               <button name='search-page' className='front-page-button' onClick={this.togglePage} >See More Restaurants</button>
             </div>
