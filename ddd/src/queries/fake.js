@@ -538,8 +538,133 @@ const randomSix = [
     }
 ]
 
+const worstTwenty = [
+        {
+            "camis": "50033122",
+            "count": "100",
+            "dba": "PARTY WELL RESTAURANT & ORIENTAL BAKERY",
+            "street": "41ST AVE"
+        },
+        {
+            "camis": "41683816",
+            "count": "94",
+            "dba": "MAX BAKERY & RESTAURANT",
+            "street": "90 STREET"
+        },
+        {
+            "camis": "41289382",
+            "count": "91",
+            "dba": "JADE ASIAN RESTAURANT",
+            "street": "39 AVENUE"
+        },
+        {
+            "camis": "50001880",
+            "count": "87",
+            "dba": "GANG SAN DEUL",
+            "street": "NORTHERN BLVD"
+        },
+        {
+            "camis": "41630632",
+            "count": "82",
+            "dba": "J J NOODLE",
+            "street": "HENRY STREET"
+        },
+        {
+            "camis": "50035784",
+            "count": "79",
+            "dba": "BIG WONG RESTAURANT",
+            "street": "MOTT ST"
+        },
+        {
+            "camis": "41510846",
+            "count": "78",
+            "dba": "218 RESTAURANT",
+            "street": "GRAND STREET"
+        },
+        {
+            "camis": "50003580",
+            "count": "76",
+            "dba": "XING WONG BBQ",
+            "street": "E BROADWAY"
+        },
+        {
+            "camis": "41653879",
+            "count": "74",
+            "dba": "LENOX SAPHIRE",
+            "street": "LENOX AVENUE"
+        },
+        {
+            "camis": "40383009",
+            "count": "73",
+            "dba": "CHA CHA'S BACKYARD GARDEN BAR & CAFE",
+            "street": "MULBERRY STREET"
+        },
+        {
+            "camis": "50014886",
+            "count": "71",
+            "dba": "NEW LUCKY CHINESE RESTAURANT",
+            "street": "FORT HAMILTON PKWY"
+        },
+        {
+            "camis": "40400811",
+            "count": "71",
+            "dba": "CAFE VOLNA",
+            "street": "BRIGHTON    4 STREET"
+        },
+        {
+            "camis": "40645073",
+            "count": "71",
+            "dba": "LA SABROSURA",
+            "street": "EAST  170 STREET"
+        },
+        {
+            "camis": "40762853",
+            "count": "70",
+            "dba": "GREAT N.Y. NOODLETOWN",
+            "street": "BOWERY"
+        },
+        {
+            "camis": "50010805",
+            "count": "70",
+            "dba": "CAFE AU LEE",
+            "street": "LEE AVE"
+        },
+        {
+            "camis": "50018552",
+            "count": "70",
+            "dba": "ORCHID DYNASTY RESTAURANT",
+            "street": "NEW UTRECHT AVE"
+        },
+        {
+            "camis": "41164793",
+            "count": "70",
+            "dba": "LATINO'S BAR & GRILL RESTAURANT",
+            "street": "BROADWAY"
+        },
+        {
+            "camis": "50032777",
+            "count": "69",
+            "dba": "SKYLINE DINER",
+            "street": "UNION TPKE"
+        },
+        {
+            "camis": "50038353",
+            "count": "69",
+            "dba": "TOWERS RESTAURANT AND CATERING",
+            "street": "GRAND CENTRAL PKWY"
+        },
+        {
+            "camis": "41197758",
+            "count": "69",
+            "dba": "CURRY LEAVES RESTAURANT",
+            "street": "40 ROAD"
+        }
+]
+
 const getAll = () => randomSix;
+const getWorst = () => worstTwenty;
 
 export default {
     getAll,
+    getWorst
 }

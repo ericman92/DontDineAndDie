@@ -3,7 +3,7 @@ import './App.css';
 import ListSingle from './components/ListSingle';
 import SearchPage from './components/SearchPage'
 import getBy from './queries/queries'
-import getSix from './queries/fake';
+import fake from './queries/fake';
 
 class App extends Component {
   constructor() {
@@ -11,6 +11,7 @@ class App extends Component {
     this.state = {
       currentPage: 'front-page',
       randomItem: ''
+
     }
   }
 
@@ -25,9 +26,9 @@ class App extends Component {
   render() {
     const {currentPage} = this.state
     let rando = Math.floor(Math.random() * 5 + 1)
-    let name = getSix.getAll()[rando].dba;
-    let desc = getSix.getAll()[rando].violation_description;
-    let complaintNumber = getSix.getAll()[rando].count
+    let topWorst = fake.getWorst()
+    let desc = fake.getWorst()[rando].violation_description;
+    let complaintNumber = fake.getAll()[rando].count
     return (
       <div>
         {currentPage === 'front-page'
@@ -36,9 +37,9 @@ class App extends Component {
               <h1 className='header'>Don't Dine and Die</h1>
               <div className='random-restaurant'>
                 <ListSingle
-                  complaintNumber={complaintNumber}
-                  restaurantName={name}
-                  complaintDescription={desc}/>
+                  complaintNumber={topWorst[12].count}
+                  restaurantName={topWorst[12].dba}
+                  complaintDescription={`Facility not vermin proof. Harborage or conditions conducive to attracting vermin to the premises and/or allowing vermin to exist`}/>
               </div>
               <button
                 name='search-page'
