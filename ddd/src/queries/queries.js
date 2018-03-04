@@ -27,6 +27,7 @@ export const getByDBA = (name) => {
     .catch((err) => console.log(err))
 }
 
-export const getBy
+export default getByZip
+
 //https://data.cityofnewyork.us/resource/9w7m-hzhe.json?$select=count(*),camis,dba,violation_description,street,cuisine_description,boro,zipcode&$group=camis,dba,violation_description,street,cuisine_description,boro,zipcode&$WHERE=${cuisine}&$limit=10&$order=count(*)DESC
 
