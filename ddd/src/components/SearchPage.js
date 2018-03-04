@@ -31,6 +31,7 @@ class SearchPage extends Component {
                 this.setState({
                     data: data.data
                 })
+            })
         }
         
         if(e.target.name === 'cuisine') {
