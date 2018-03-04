@@ -6,18 +6,28 @@ class SearchPage extends Component {
     constructor() {
         super();
         this.state = {
-            zipcode: 0,
+            zipcode: '',
             cuisine: '',
             borough: '',
-            complaintNumber: false
+            complaintNumber: false,
+            data: '',
         }
     }
 
     inputHandler = (e) => {
-        console.log(e.target.value);
         this.setState({
             [e.target.name]: e.target.value
         }, this.log)
+        
+        if(e.target.value.length >= 5){
+            queries.getByZip(e.target.value)
+            .then(data => {
+                console.log(data);
+                this.setState({
+                    data: data
+                })
+            })
+        }
     }
 
     complaintHandler = () => {
@@ -31,7 +41,7 @@ class SearchPage extends Component {
 
     render() {
         const {togglePage} = this.props
-        const {complaintNumber} = this.state
+        const {complaintNumber, cuisine, zipcode} = this.state
         return (
             <div className='search-page'>
                 <button name='front-page' onClick={togglePage} >Home</button>
@@ -47,8 +57,8 @@ class SearchPage extends Component {
                         <option className='search-page-filters-boro-options' value="brooklyn">Brooklyn</option>
                         <option className='search-page-filters-boro-options' value="staten">Staten Island</option>
                     </select>
-                    <input className='search-page-filters-cuisine' type='text' placeholder='Cuisine' onChange={this.inputHandler} name="cuisine" />
-                    <input className="search-page-filters-zip-code" type="text" placeholder='Zip code' onChange={this.inputHandler} name="zipcode"  />
+                    <input className='search-page-filters-cuisine' type='text' placeholder='Cuisine' onChange={this.inputHandler} name="cuisine" value={cuisine}/>
+                    <input className="search-page-filters-zip-code" type="text" placeholder='Zip code' onChange={this.inputHandler} name="zipcode" value={zipcode}/>
                 </div>
             </div>
         )}
