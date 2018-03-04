@@ -14,12 +14,16 @@ class SearchPage extends Component {
         }
     }
 
+    toTitleCase(str){
+        return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    }
+
     inputHandler = (e) => {
         this.setState({
             [e.target.name]: e.target.value
         }, this.log)
-        
-        if(e.target.value.length >= 5){
+        //calling zipcode
+        if(e.target.value.length >= 5 && e.target.name === 'zipcode'){
             queries.getByZip(e.target.value)
             .then(data => {
                 console.log(data);
@@ -28,6 +32,25 @@ class SearchPage extends Component {
                 })
             })
         }
+        
+        if(e.target.name === 'cuisine') {
+            queries.getCuisine(this.toTitleCase(e.target.value))
+            .then(data => {
+                this.setState({
+                    data: data
+                })
+            })
+        }
+
+        if(e.target.name === 'borough') {
+            queries.getByBoro(e.target.value.toUpperCase())
+            .then(data => {
+                this.setState({
+                    data: data
+                })
+            })
+        }
+
     }
 
     complaintHandler = () => {
