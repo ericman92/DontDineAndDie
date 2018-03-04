@@ -1,7 +1,7 @@
 .search-page {
     display: grid;
     grid-template-columns: auto 600px auto;
-    grid-auto-rows: 1fr 1fr 2fr;
+    grid-auto-rows: 1fr 1fr 20fr;
     grid-template-areas: 
     '. search-page-header .'
     '. search-page-filters .'
@@ -29,8 +29,9 @@
 .search-page-list {
     grid-area: search-page-list;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 100%
+    grid-template-columns: 1fr;
+    grid-auto-rows: 100%;
+    grid-gap: 10px;
 }
 
 .search-page-filters-complaint-number {
@@ -52,5 +53,4 @@
 .search-page-home-button {
     height: 20px;
 }
-
 

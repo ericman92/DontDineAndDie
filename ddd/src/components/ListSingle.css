@@ -1,6 +1,9 @@
 .random-restaurant {
-    display: grid;
     grid-area: random-restaurant;
+}
+
+.single-link {
+    display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr;
     grid-template-areas: 'single-link-complaintNumber single-link-info';

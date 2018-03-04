@@ -1,7 +1,7 @@
 import React from 'react'
 import './ListSingle.css'
 
-const ListSingle = ({complaintNumber, restaurantName, complaintDescription}) => <div className='random-restaurant'>
+const ListSingle = ({complaintNumber, restaurantName, complaintDescription}) => <div className='single-link'>
     <div className='wrapper'>
         <span className='single-link-complaint-number'>{complaintNumber}</span><br/>
         <p className='single-link-complaint-footer'>Complaints</p>
