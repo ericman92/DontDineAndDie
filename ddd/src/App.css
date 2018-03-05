@@ -25,6 +25,7 @@
 
 .front-page-button {
   grid-area: front-page-button;
+  margin-top: 30px;
   height: 20px;
 }
 

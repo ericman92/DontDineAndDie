@@ -8,7 +8,7 @@
     grid-template-rows: 1fr;
     grid-template-areas: 'single-link-complaintNumber single-link-info';
     border: white 2px solid;
-    box-shadow: black 1px 1px 5px;
+    box-shadow: black 1px 1px 15px;
     background-color: white;
     color: rgb(177, 0, 0);
     text-shadow: none;
