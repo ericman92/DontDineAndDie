@@ -75,7 +75,7 @@ class SearchPage extends Component {
                     name='front-page'
                     onClick={togglePage}
                     className='search-page-home-button'>
-                    <i className="fa fa-home" onClick={togglePage}></i>
+                    Home
                 </button>
                 <h1 className='search-page-header'>Don't Dine & Die</h1>
                 <div className='search-page-filters'>
