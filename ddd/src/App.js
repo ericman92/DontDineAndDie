@@ -34,7 +34,7 @@ class App extends Component {
         {currentPage === 'front-page'
           ? <div className="wsie-container">
               {/* <input type='text' placeholder="Enter Restaurant Name" /> */}
-              <h1 className='header'>Don't Dine and Die</h1>
+              <h1 className='header'>Don't Dine & Die</h1>
               <div className='random-restaurant'>
                 <ListSingle
                   complaintNumber={topWorst[12].count}

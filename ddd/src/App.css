@@ -5,16 +5,17 @@
   grid-auto-rows: 2fr 1fr 1fr;
   grid-template-areas: 
   '. header header header .'
-  '. . random-restaurant . .'
-  '. . random-restaurant . .'
+  '. random-restaurant random-restaurant random-restaurant .'
+  '. random-restaurant random-restaurant random-restaurant .'
   '. . front-page-button . .';
 }
 
 .header {
   grid-area: header;
   align-self: end;
-  margin: 125px 0px 0px;
-  font-size: 3em
+  margin: 30px;
+  font-size: 4em;
+  font-family: 'Playfair Display', serif;
 }
 
 .random-restaurant {

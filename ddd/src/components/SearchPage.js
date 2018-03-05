@@ -70,15 +70,15 @@ class SearchPage extends Component {
         return (
             <div className='search-page'>
                 <button name='front-page' onClick={togglePage} className='search-page-home-button' >Home</button>
-                <h1 className='search-page-header'>Don't Dine and Die</h1>
+                <h1 className='search-page-header'>Don't Dine & Die</h1>
                 <div className='search-page-filters'>
                     {complaintNumber
                         ? <p
                                 className='search-page-filters-complaint-number'
-                                onClick={this.complaintHandler}># Of Complaints ↑</p>
+                                onClick={this.complaintHandler}># Of Violations ↑</p>
                         : <p
                             className='search-page-filters-complaint-number'
-                            onClick={this.complaintHandler}># Of Complaints</p>}
+                            onClick={this.complaintHandler}># Of Violations</p>}
                     <select
                         className='search-page-filters-boro'
                         placeholder='Borough'
@@ -108,7 +108,7 @@ class SearchPage extends Component {
                 </div>
                     <div className='search-page-list' >
                     {data.length === 0
-                        ? <p>Hello</p>
+                        ? <p>Please enter a location or cuisine.</p>
                         : data.map(obj => {
                         return <ListSingle
                             complaintNumber={obj.count}
