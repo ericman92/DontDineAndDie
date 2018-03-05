@@ -10,7 +10,6 @@ class SearchPage extends Component {
             zipcode: '',
             cuisine: '',
             borough: '',
-            complaintNumber: false,
             data: []
         }
     }
@@ -72,13 +71,6 @@ class SearchPage extends Component {
                 <button name='front-page' onClick={togglePage} className='search-page-home-button' >Home</button>
                 <h1 className='search-page-header'>Don't Dine & Die</h1>
                 <div className='search-page-filters'>
-                    {complaintNumber
-                        ? <p
-                                className='search-page-filters-complaint-number'
-                                onClick={this.complaintHandler}># Of Violations ↑</p>
-                        : <p
-                            className='search-page-filters-complaint-number'
-                            onClick={this.complaintHandler}># Of Violations</p>}
                     <select
                         className='search-page-filters-boro'
                         placeholder='Borough'

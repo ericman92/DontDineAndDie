@@ -19,13 +19,13 @@
 .search-page-filters {
     grid-area: search-page-filters;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas: 
-    'search-page-filters-complaint-number search-page-filters-boro search-page-filters-cuisine search-page-filters-zip-code';
+    'search-page-filters-boro search-page-filters-cuisine search-page-filters-zip-code';
     width: 100%;
     align-items: center;
-    grid-gap: 25px;
+    grid-gap: 40px;
 }
 
 .search-page-list {
