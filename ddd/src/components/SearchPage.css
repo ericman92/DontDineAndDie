@@ -1,17 +1,17 @@
 .search-page {
     display: grid;
-    grid-template-columns: auto 600px auto;
+    grid-template-columns: auto 700px auto;
     grid-auto-rows: 1fr 1fr 20fr;
     grid-template-areas: 
     '. search-page-header .'
     '. search-page-filters .'
     '. search-page-list .';
-    justify-items: center;
 }
 
 .search-page-header {
     grid-area: search-page-header;
     height: 50px;
+    text-align: center;
     font-family: 'Playfair Display', serif;
     font-size: 4em;
 }
@@ -54,5 +54,15 @@
 }
 
 .search-page-home-button {
-    height: 20px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
 }

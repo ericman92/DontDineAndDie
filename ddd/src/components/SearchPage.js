@@ -68,7 +68,7 @@ class SearchPage extends Component {
         console.log(data)
         return (
             <div className='search-page'>
-                <button name='front-page' onClick={togglePage} className='search-page-home-button' >Home</button>
+                <button name='front-page' onClick={togglePage} className='search-page-home-button' ><i class="fa fa-home"></i></button>
                 <h1 className='search-page-header'>Don't Dine & Die</h1>
                 <div className='search-page-filters'>
                     <select
