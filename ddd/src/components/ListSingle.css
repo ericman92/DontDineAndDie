@@ -12,6 +12,7 @@
     background-color: white;
     color: rgb(177, 0, 0);
     text-shadow: none;
+    overflow: scroll
 }
 
 .wrapper {
