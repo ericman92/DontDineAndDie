@@ -77,7 +77,7 @@ class SearchPage extends Component {
                     className='search-page-home-button'>
                     Home
                 </button>
-                <h1 className='search-page-header'>Don't Dine & Die</h1>
+                <h1 className='search-page-header'>Restaurant Search</h1>
                 <div className='search-page-filters'>
                     <select
                         className='search-page-filters-boro box-shadow'
@@ -116,9 +116,7 @@ class SearchPage extends Component {
                                 complaintDescription={obj.violation_description}/>
                         })}
                 </div>
-                <div className='copyright'>
-            Aiden - Sami - Lucy - Mike - Eric | C4Q Hackathon 2018
-        </div>
+                
             </div>
         )
     }

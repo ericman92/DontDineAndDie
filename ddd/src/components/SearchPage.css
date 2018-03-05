@@ -36,11 +36,12 @@
     grid-auto-rows: 100%;
     grid-gap: 20px;
     height: 120px;
+    text-align: right;
 }
 
 .search-page-filters-boro {
     grid-area: search-page-filters-boro;
-    border-radius: 10px
+    border-radius: 10px;
 }
 
 .search-page-filters-cuisine {
@@ -55,14 +56,14 @@
 
 .search-page-home-button {
     grid-area: search-page-header;
-    height: 40px;
+    height: 30px;
     border-radius: 4px;
     background-color: #f4511e;
     border: none;
     color: #FFFFFF;
     text-align: center;
-    font-size: 20px;
-    width: 100px;
+    font-size: 16px;
+    width: 60px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
