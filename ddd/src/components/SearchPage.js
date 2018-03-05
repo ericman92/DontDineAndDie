@@ -64,7 +64,7 @@ class SearchPage extends Component {
 
     render() {
         const {togglePage} = this.props
-        const {complaintNumber, cuisine, zipcode, data} = this.state
+        const { cuisine, zipcode, data} = this.state
         console.log(data)
         return (
             <div className='search-page'>
@@ -72,11 +72,11 @@ class SearchPage extends Component {
                 <h1 className='search-page-header'>Don't Dine & Die</h1>
                 <div className='search-page-filters'>
                     <select
-                        className='search-page-filters-boro'
+                        className='search-page-filters-boro box-shadow'
                         placeholder='Borough'
                         name='borough'
                         onChange={this.inputHandler}>
-                        <option value=''>Borough</option>
+                        <option value='' >Borough</option>
                         <option className='search-page-filters-boro-options' value="bronx">Bronx</option>
                         <option className='search-page-filters-boro-options' value="manhattan">Manhattan</option>
                         <option className='search-page-filters-boro-options' value="queens">Queens</option>
@@ -84,14 +84,14 @@ class SearchPage extends Component {
                         <option className='search-page-filters-boro-options' value="staten">Staten Island</option>
                     </select>
                     <input
-                        className='search-page-filters-cuisine'
+                        className='search-page-filters-cuisine box-shadow'
                         type='text'
                         placeholder='Cuisine'
                         onChange={this.inputHandler}
                         name="cuisine"
                         value={cuisine}/>
                     <input
-                        className="search-page-filters-zip-code"
+                        className="search-page-filters-zip-code box-shadow"
                         type="text"
                         placeholder='Zip code'
                         onChange={this.inputHandler}

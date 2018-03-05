@@ -16,6 +16,7 @@
   margin: 30px;
   font-size: 4em;
   font-family: 'Playfair Display', serif;
+  text-shadow: black 5px 5px 15px;
 }
 
 .random-restaurant {

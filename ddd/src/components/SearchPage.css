@@ -14,6 +14,7 @@
     text-align: center;
     font-family: 'Playfair Display', serif;
     font-size: 4em;
+    text-shadow: black 5px 5px 15px;
 }
 
 .search-page-filters {
@@ -37,20 +38,19 @@
     height: 120px;
 }
 
-.search-page-filters-complaint-number {
-    grid-area: search-page-filters-complaint-number;
-}
-
 .search-page-filters-boro {
-    grid-area: search-page-filters-boro
+    grid-area: search-page-filters-boro;
+    border-radius: 10px
 }
 
 .search-page-filters-cuisine {
-    grid-area: search-page-filters-cuisine
+    grid-area: search-page-filters-cuisine;
+    border-radius: 0 10px 10px 0;
 }
 
 .search-page-filters-zip-code {
-    grid-area: search-page-filters-zip-code
+    grid-area: search-page-filters-zip-code;
+    border-radius: 0 10px 10px 0;
 }
 
 .search-page-home-button {
@@ -65,4 +65,8 @@
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
+}
+
+.box-shadow {
+    box-shadow: black 1px 1px 10px;
 }

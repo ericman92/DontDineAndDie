@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import './App.css';
 import ListSingle from './components/ListSingle';
 import SearchPage from './components/SearchPage'
-import getBy from './queries/queries'
 import fake from './queries/fake';
 
 class App extends Component {
@@ -25,10 +24,10 @@ class App extends Component {
 
   render() {
     const {currentPage} = this.state
-    let rando = Math.floor(Math.random() * 5 + 1)
+    // let rando = Math.floor(Math.random() * 5 + 1)
     let topWorst = fake.getWorst()
-    let desc = fake.getWorst()[rando].violation_description;
-    let complaintNumber = fake.getAll()[rando].count
+    // let desc = fake.getWorst()[rando].violation_description;
+    // let complaintNumber = fake.getAll()[rando].count
     return (
       <div>
         {currentPage === 'front-page'
@@ -43,7 +42,7 @@ class App extends Component {
               </div>
               <button
                 name='search-page'
-                className='front-page-button'
+                className='front-page-button box-shadow'
                 onClick={this.togglePage}>See More Restaurants</button>
             </div>
           : <SearchPage togglePage={this.togglePage}/>

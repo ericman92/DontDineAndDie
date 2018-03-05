@@ -1,6 +1,5 @@
 const axios = require('axios');
-
-const URL = 'https://data.cityofnewyork.us/resource/9w7m-hzhe.json'
+// const URL = 'https://data.cityofnewyork.us/resource/9w7m-hzhe.json'
 const cuisineURL = `https://data.cityofnewyork.us/resource/9w7m-hzhe.json?$select=count(*),camis,dba,violation_description,street,cuisine_description,boro,zipcode&$group=camis,dba,violation_description,street,cuisine_description,boro,zipcode`
 
 const getCuisine = (cuisine) => {
@@ -45,22 +44,22 @@ const getByBoro = (boro) => {
     }
 }
 // search with multiple queries
-const getByAll = (cuisine, zip, boro, dba) => {
-    return axios
-    .get(`https://data.cityofnewyork.us/resource/9w7m-hzhe.json?$select=count(*),dba,grade,street,boro,violation_description&$group=dba,grade,street,boro,violation_description&cuisine_description=${cuisine}&zipcode=${zip}&boro=${boro}&dba=${dba}&$limit=20`)
-    .then((response) => {
-        return response
-    })
-}
+// const getByAll = (cuisine, zip, boro, dba) => {
+//     return axios
+//     .get(`https://data.cityofnewyork.us/resource/9w7m-hzhe.json?$select=count(*),dba,grade,street,boro,violation_description&$group=dba,grade,street,boro,violation_description&cuisine_description=${cuisine}&zipcode=${zip}&boro=${boro}&dba=${dba}&$limit=20`)
+//     .then((response) => {
+//         return response
+//     })
+// }
 
 // top ten most complaints in nyc
-const getTopTen = () => {
-    return axios
-    .get(`https://data.cityofnewyork.us/resource/9w7m-hzhe.json?$select=count(*),dba,camis&$group=dba,camis&$limit=10&$order=count(*)DESC`)
-    .then((response) => {
+// const getTopTen = () => {
+//     return axios
+//     .get(`https://data.cityofnewyork.us/resource/9w7m-hzhe.json?$select=count(*),dba,camis&$group=dba,camis&$limit=10&$order=count(*)DESC`)
+//     .then((response) => {
 
-    })
-}
+//     })
+// }
 
 export default {
     getByZip,
