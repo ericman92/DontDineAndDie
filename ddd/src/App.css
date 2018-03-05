@@ -30,7 +30,13 @@
   height: 20px;
 }
 
-input {
-  grid-area: random-restaurant;
-  height: 15px;
+.copyright {
+  position: absolute;
+  bottom: 3%;  
+  left: 50%; 
+  transform: translate(-50%, 50%);
+  height: 1.5em;
+  width: 600px;
+  color: white;
+  text-align: center;
 }

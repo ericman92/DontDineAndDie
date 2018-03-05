@@ -14,8 +14,14 @@ class SearchPage extends Component {
         }
     }
 
-    toTitleCase(str){
-        return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    toTitleCase(str) {
+        return str.replace(/\w\S*/g, function (txt) {
+            return txt
+                .charAt(0)
+                .toUpperCase() + txt
+                .substr(1)
+                .toLowerCase();
+        });
     }
 
     inputHandler = (e) => {
@@ -23,32 +29,29 @@ class SearchPage extends Component {
             [e.target.name]: e.target.value
         }, this.log)
         //calling zipcode
-        if(e.target.value.length >= 5 && e.target.name === 'zipcode'){
-            queries.getByZip(e.target.value)
-            .then(data => {
-                console.log(data);
-                this.setState({
-                    data: data.data
+        if (e.target.value.length >= 5 && e.target.name === 'zipcode') {
+            queries
+                .getByZip(e.target.value)
+                .then(data => {
+                    console.log(data);
+                    this.setState({data: data.data})
                 })
-            })
         }
 
-        if(e.target.name === 'cuisine') {
-            queries.getCuisine(this.toTitleCase(e.target.value))
-            .then(data => {
-                this.setState({
-                    data: data.data
+        if (e.target.name === 'cuisine') {
+            queries
+                .getCuisine(this.toTitleCase(e.target.value))
+                .then(data => {
+                    this.setState({data: data.data})
                 })
-            })
         }
 
-        if(e.target.name === 'borough') {
-            queries.getByBoro(e.target.value.toUpperCase())
-            .then(data => {
-                this.setState({
-                    data: data.data
+        if (e.target.name === 'borough') {
+            queries
+                .getByBoro(e.target.value.toUpperCase())
+                .then(data => {
+                    this.setState({data: data.data})
                 })
-            })
         }
 
     }
@@ -64,11 +67,16 @@ class SearchPage extends Component {
 
     render() {
         const {togglePage} = this.props
-        const { cuisine, zipcode, data} = this.state
+        const {cuisine, zipcode, data} = this.state
         console.log(data)
         return (
             <div className='search-page'>
-                <button name='front-page' onClick={togglePage} className='search-page-home-button' ><i class="fa fa-home"></i></button>
+                <button
+                    name='front-page'
+                    onClick={togglePage}
+                    className='search-page-home-button'>
+                    <i className="fa fa-home" onClick={togglePage}></i>
+                </button>
                 <h1 className='search-page-header'>Don't Dine & Die</h1>
                 <div className='search-page-filters'>
                     <select
@@ -76,12 +84,12 @@ class SearchPage extends Component {
                         placeholder='Borough'
                         name='borough'
                         onChange={this.inputHandler}>
-                        <option value='' >Borough</option>
-                        <option className='search-page-filters-boro-options' value="bronx">Bronx</option>
-                        <option className='search-page-filters-boro-options' value="manhattan">Manhattan</option>
-                        <option className='search-page-filters-boro-options' value="queens">Queens</option>
-                        <option className='search-page-filters-boro-options' value="brooklyn">Brooklyn</option>
-                        <option className='search-page-filters-boro-options' value="staten">Staten Island</option>
+                        <option value=''>Borough</option>
+                        <option value="bronx">Bronx</option>
+                        <option value="manhattan">Manhattan</option>
+                        <option value="queens">Queens</option>
+                        <option value="brooklyn">Brooklyn</option>
+                        <option value="staten">Staten Island</option>
                     </select>
                     <input
                         className='search-page-filters-cuisine box-shadow'
@@ -98,19 +106,22 @@ class SearchPage extends Component {
                         name="zipcode"
                         value={zipcode}/>
                 </div>
-                    <div className='search-page-list' >
+                <div className='search-page-list'>
                     {data.length === 0
                         ? <p>Please enter a location or cuisine.</p>
                         : data.map(obj => {
-                        return <ListSingle
-                            complaintNumber={obj.count}
-                            restaurantName={obj.dba}
-                    complaintDescription={obj.violation_description}/>})}
-                        </div>
+                            return <ListSingle
+                                complaintNumber={obj.count}
+                                restaurantName={obj.dba}
+                                complaintDescription={obj.violation_description}/>
+                        })}
+                </div>
+                <div className='copyright'>
+            Aiden - Sami - Lucy - Mike - Eric | C4Q Hackathon 2018
+        </div>
             </div>
         )
     }
 }
 
 export default SearchPage;
-

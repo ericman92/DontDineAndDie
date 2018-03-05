@@ -44,9 +44,14 @@ class App extends Component {
                 name='search-page'
                 className='front-page-button box-shadow'
                 onClick={this.togglePage}>See More Restaurants</button>
+                <div className='copyright'>
+            Aiden - Sami - Lucy - Mike - Eric | C4Q Hackathon 2018
+        </div>
             </div>
           : <SearchPage togglePage={this.togglePage}/>
-      } </div>
+      } 
+        
+      </div>
 
     )
 
