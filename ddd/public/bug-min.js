@@ -70,8 +70,8 @@ var SpiderController = function () {
         maxDelay: 3E3,
         minSpeed: 6,
         maxSpeed: 13,
-        minBugs: 5,
-        maxBugs: 7
+        minBugs: 3,
+        maxBugs: 3
     });
     this.initialize.apply(this, arguments)
 }; SpiderController.prototype = BugDispatch;
@@ -87,8 +87,8 @@ var CaockroachController = function () {
         maxDelay: 3E3,
         minSpeed: 20,
         maxSpeed: 25,
-        minBugs: 4,
-        maxBugs: 10
+        minBugs: 3,
+        maxBugs: 3
     });
     this.initialize.apply(this, arguments)
 }; CaockroachController.prototype = BugDispatch;
