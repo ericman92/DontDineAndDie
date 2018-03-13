@@ -66,17 +66,10 @@ class SearchPage extends Component {
     log = () => console.log(this.state)
 
     render() {
-        const {togglePage} = this.props
         const {cuisine, zipcode, data} = this.state
         console.log(data)
         return (
             <div className='search-page'>
-                <button
-                    name='front-page'
-                    onClick={togglePage}
-                    className='search-page-home-button'>
-                    Home
-                </button>
                 <h1 className='search-page-header'>Restaurant Search</h1>
                 <div className='search-page-filters'>
                     <select

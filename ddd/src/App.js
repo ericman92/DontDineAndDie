@@ -26,34 +26,9 @@ class App extends Component {
     const {currentPage} = this.state
     // let rando = Math.floor(Math.random() * 5 + 1)
     let topWorst = fake.getWorst()
-    // let desc = fake.getWorst()[rando].violation_description;
-    // let complaintNumber = fake.getAll()[rando].count
-    return (
-      <div>
-        {currentPage === 'front-page'
-          ? <div className="wsie-container">
-              {/* <input type='text' placeholder="Enter Restaurant Name" /> */}
-              <h1 className='header'>Don't Dine & Die</h1>
-              <div className='random-restaurant'>
-                <ListSingle
-                  complaintNumber={topWorst[12].count}
-                  restaurantName={topWorst[12].dba}
-                  complaintDescription={`Facility not vermin proof. Harborage or conditions conducive to attracting vermin to the premises and/or allowing vermin to exist`}/>
-              </div>
-              <button
-                name='search-page'
-                className='front-page-button box-shadow'
-                onClick={this.togglePage}>See More Restaurants</button>
-                <div className='copyright'>
-            Aiden - Sami - Lucy - Mike - Eric | C4Q Hackathon 2018
-        </div>
-            </div>
-          : <SearchPage togglePage={this.togglePage}/>
-      } 
-        
-      </div>
-
-    )
+    // let desc = fake.getWorst()[rando].violation_description; let complaintNumber
+    // = fake.getAll()[rando].count
+    return (<SearchPage/>)
 
   }
 }
